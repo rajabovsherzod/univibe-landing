@@ -24,10 +24,10 @@ export default function ForUniversities() {
               Butun kampus faolligi — <span className="text-[#0072b0]">bitta tizimda</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#3a5a75] lg:mx-0">
-              Taxminlar emas, aniq ma'lumot bilan qaror qabul qiling. Tadbir yarating, davomat oling va ta'sirni o'lchang.
+              Taxminlar emas, aniq ma&apos;lumot bilan qaror qabul qiling. Tadbir yarating, davomat oling va ta&apos;sirni o&apos;lchang.
             </p>
             <a href="/contact" className="mt-8 inline-flex rounded-full bg-[#0072b0] px-8 py-4 text-base font-semibold text-white shadow-xl shadow-[#0072b0]/30 transition-transform hover:-translate-y-0.5">
-              Demo so'rash
+              Demo so&apos;rash
             </a>
           </div>
         </div>

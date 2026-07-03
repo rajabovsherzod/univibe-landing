@@ -141,6 +141,8 @@ export function HeroCinematic() {
   const [homeReady, setHomeReady] = useState(false);
   useEffect(() => {
     if (scene !== "home") return;
+    // Replay the boot splash each time the loop re-enters "home".
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHomeReady(false);
     const t = setTimeout(() => setHomeReady(true), 1750);
     return () => clearTimeout(t);
@@ -265,7 +267,7 @@ const variants = {
 // ── beat components ────────────────────────────────────────────────────────
 const OVERLAY = "absolute inset-0 z-40 flex items-center justify-center bg-black/35 backdrop-blur-[2px]";
 const CARD = "relative flex w-[300px] flex-col items-center rounded-2xl bg-white p-5 shadow-2xl";
-const bigConfetti = { count: 220, velocity: 22, gravity: 0.55, colors: ["#0072b0", "#59b0ff", "#facc15", "#22c55e", "#ff6b6b", "#a855f7", "#ffffff"], background: "transparent", text: "", durationInFrames: 100 } as const;
+const bigConfetti = { count: 220, velocity: 22, gravity: 0.55, colors: ["#0072b0", "#59b0ff", "#facc15", "#22c55e", "#ff6b6b", "#a855f7", "#ffffff"], background: "transparent", text: "", durationInFrames: 100 };
 const checkSvg = (<svg viewBox="0 0 24 24" className="size-8" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12l5 5L20 7" /></svg>);
 
 /** Real app's success toast, replayed after the cursor "clicks" Ro'yxatdan o'tish. */

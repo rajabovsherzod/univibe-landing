@@ -20,16 +20,12 @@ export interface SuccessConfettiProps {
 }
 
 // Seed-based PRNG (mulberry32) to replace Remotion's random
-// eslint-disable-next-line no-bitwise
 const mulberry32 = (seed: number) => {
   let a = Math.trunc(seed);
   return () => {
     a = Math.trunc(a + 1_814_331_957);
-    // eslint-disable-next-line no-bitwise
     let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    // eslint-disable-next-line no-bitwise
     t ^= Math.imul(t ^ (t >>> 7), 61 | t);
-    // eslint-disable-next-line no-bitwise unicorn/number-literal-case
     return Math.trunc(t & 0xff_ff_ff) / 4_294_967_296;
   };
 };
@@ -38,8 +34,8 @@ const hashSeed = (seed: string): number => {
   let hash = 0;
   for (let i = 0; i < seed.length; i += 1) {
     const char = seed.codePointAt(i) ?? 0;
-    hash = (hash << 5) - hash + char; // eslint-disable-line no-bitwise
-    hash &= hash; // eslint-disable-line no-bitwise
+    hash = (hash << 5) - hash + char;
+    hash &= hash;
   }
   return hash;
 };

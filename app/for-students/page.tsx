@@ -21,7 +21,7 @@ export default function ForStudents() {
               Universitet hayotini yasha va <span className="text-[#0072b0]">mukofot ol</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#3a5a75] lg:mx-0">
-              Tadbirlarni kashf eting, jamoalarga qo'shiling, coin yig'ing va sovg'alar yuting — barchasi bitta ilovada.
+              Tadbirlarni kashf eting, jamoalarga qo&apos;shiling, coin yig&apos;ing va sovg&apos;alar yuting — barchasi bitta ilovada.
             </p>
             <a href="https://students.univibe.uz" className="mt-8 inline-flex rounded-full bg-[#0072b0] px-8 py-4 text-base font-semibold text-white shadow-xl shadow-[#0072b0]/30 transition-transform hover:-translate-y-0.5">
               Ilovaga kirish

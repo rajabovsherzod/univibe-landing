@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   CalendarDotsIcon, QrCodeIcon, TrophyIcon, StorefrontIcon, UsersThreeIcon,
   ChartLineUpIcon, GiftIcon, TicketIcon, SparkleIcon, ImageSquareIcon,
@@ -242,10 +243,10 @@ export function Footer() {
           <span className="font-display text-lg font-bold tracking-tight text-white">Uni<span className="text-[#59b0ff]">vibe</span></span>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-white/60">
-          <a href="/#imkoniyatlar" className="hover:text-white">{t("nav.features")}</a>
-          <a href="/for-students" className="hover:text-white">{t("nav.students")}</a>
-          <a href="/for-universities" className="hover:text-white">{t("nav.universities")}</a>
-          <a href="/contact" className="hover:text-white">{t("nav.contact")}</a>
+          <Link href="/#imkoniyatlar" className="hover:text-white">{t("nav.features")}</Link>
+          <Link href="/for-students" className="hover:text-white">{t("nav.students")}</Link>
+          <Link href="/for-universities" className="hover:text-white">{t("nav.universities")}</Link>
+          <Link href="/contact" className="hover:text-white">{t("nav.contact")}</Link>
         </div>
         <p className="text-sm text-white">© 2026 Univibe</p>
       </div>

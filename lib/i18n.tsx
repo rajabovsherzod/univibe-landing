@@ -126,6 +126,8 @@ function readCookie(): Lang {
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Lang>("uz");
+  // Hydrate the language from the persisted cookie on mount.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setLangState(readCookie()), []);
   const setLang = (l: Lang) => {
     document.cookie = `lang=${l}; path=/; max-age=31536000`;
